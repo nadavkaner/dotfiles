@@ -44,11 +44,11 @@ alias gs="git status";
 alias gp="git pull";
 alias glr="git pull --rebase";
 alias gf="git fetch";
-alias gpush="git push origin $(current_branch)";
+alias gpush="git push origin $(git_branch)";
 alias gd="git diff";
 alias ga="git add .";
 alias gcm="git checkout master";
-alias ggrh="git reset --hard origin/$(current_branch)";
+alias ggrh="git reset --hard origin/$(git_branch)";
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
-# Modified by Kent C. Dodds
+# Modified by Nadav Kaner
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -57,3 +57,34 @@ ssh-keygen -t rsa -b 4096 -C "nadavkaner1@gmail.com"
 echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
+
+echo "making system modifications:"
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
+
+# Set standby delay to 24 hours (default is 1 hour)
+sudo pmset -a standbydelay 86400
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Disable the crash reporter
+defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true

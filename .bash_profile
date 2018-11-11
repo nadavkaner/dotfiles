@@ -36,6 +36,7 @@ alias c="code .";
 alias ll="ls -al";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
+alias ~="cd ~";
 
 # git aliases
 alias gco="git checkout";

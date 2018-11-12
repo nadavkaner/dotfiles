@@ -48,7 +48,7 @@ brew tap caskroom/cask
 echo "installing apps with brew cask"
 brew cask install alfred google-chrome \
 itsycal visual-studio-code dash spotify \
-sourcetree zoomus betterzip \
+sourcetree zoomus betterzip slack \
 
 echo "Generating an RSA token for GitHub"
 ssh-keygen -t rsa -b 4096 -C "nadavkaner1@gmail.com"

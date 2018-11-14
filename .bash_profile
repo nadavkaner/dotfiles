@@ -51,6 +51,10 @@ alias ga="git add .";
 alias gcm="git checkout master";
 alias ggrh="git reset --hard origin/$(git_branch)";
 
+alias finder='open -a Finder ./'
+# needed to correctly open SourceTree from the terminal
+alias sourcetree='open /Applications/SourceTree.app/Contents/MacOS/SourceTree'
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi

@@ -50,6 +50,7 @@ alias gd="git diff";
 alias ga="git add .";
 alias gcm="git checkout master";
 alias ggrh="git reset --hard origin/$(git_branch)";
+alias ggraph="git log --graph --decorate --oneline";
 
 alias finder='open -a Finder ./'
 # needed to correctly open SourceTree from the terminal
